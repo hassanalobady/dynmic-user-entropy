@@ -7,6 +7,8 @@ The cryptography primitives used in this RNG are combination of SSS [1],  ElGama
 
 ### High-level overview 
 
+/home/hassan/Pictures/Screenshots/Screenshot from 2023-06-06 14-45-04.png
+
 ### Secure Random Number Generation:
       1) Use the input data from the user interface to configure the secure random number generation process.
       2) Implement the SSS algorithm to split the secret (random number) into shares among the players.
