@@ -7,6 +7,11 @@ The cryptography primitives used in this RNG are combination of SSS [1],  ElGama
 
 ### High-level overview 
 
+![image](https://github.com/hassanalobady/dynmic-user-entropy/assets/19050553/04664c44-2526-4b62-9aab-bae9c8c66001)
+
+
+
+![image](https://github.com/hassanalobady/dynmic-user-entropy/assets/19050553/b3b9384a-3e1f-4662-bd51-f565c2203396)
 
 ### Secure Random Number Generation:
       1) Use the input data from the user interface to configure the secure random number generation process.
