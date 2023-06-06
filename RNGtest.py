@@ -3,12 +3,15 @@ import tkinter as tk
 from tkinter import messagebox
 from Crypto.Util.number import getPrime
 
+# Shamir's Secret Sharing (SSS)
 class ShamirSecretSharing:
     def __init__(self, num_players, threshold):
         self.num_players = num_players
         self.threshold = threshold
         self.prime = getPrime(256)
-
+        
+        
+# Generate a random secret
     def generate_shares(self, secret):
         coefficients = [random.randint(1, self.prime - 1) for _ in range(self.threshold - 1)]
         shares = []
@@ -22,7 +25,8 @@ class ShamirSecretSharing:
             shares.append((player, share))
 
         return shares
-
+    
+# ElGamal Encryption and decryptoin 
 class ElGamalHomomorphicEncryption:
     def __init__(self):
         self.prime = getPrime(256)
@@ -41,7 +45,8 @@ class ElGamalHomomorphicEncryption:
         s_inv = pow(s, -1, self.prime)
         plaintext = (c2 * s_inv) % self.prime
         return plaintext
-
+    
+#Schnorr Singatures 
 class SchnorrSignatures:
     def __init__(self):
         self.prime = getPrime(256)
@@ -66,6 +71,8 @@ class SchnorrSignatures:
     def _hash_message(self, message):
         return hashlib.sha256(message).digest()
 
+    # Millimix Mixing
+    
 class MilliMixProtocol:
     @staticmethod
     def mix(shares):
@@ -97,7 +104,7 @@ class SecureRandomNumberGenerator:
 class Application(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("c")
+        self.title("Secure Random Number Generator")
         self.geometry("600x400")
 
         self.num_players_entry = tk.Entry(self)
